@@ -69,7 +69,20 @@ main {
   border: 1px solid var(--line);
   border-radius: 32px;
   padding: clamp(28px, 5vw, 56px);
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(16px, 4vw, 34px);
+  align-items: center;
+}
+
+.hero-photo {
+  width: clamp(120px, 18vw, 190px);
+  aspect-ratio: 1;
+  border-radius: 28px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--line);
+  display: block;
 }
 
 .location {
@@ -81,8 +94,8 @@ main {
 }
 
 h1 {
-  margin: 0.55rem auto 0;
-  max-width: 16ch;
+  margin: 0;
+  max-width: 17ch;
   font-size: clamp(1.75rem, 4.2vw, 3rem);
   line-height: 0.96;
   letter-spacing: -0.04em;
@@ -90,7 +103,7 @@ h1 {
 
 .headline {
   max-width: 64ch;
-  margin: 1rem auto 0;
+  margin: 1rem 0 0;
   color: var(--muted);
   font-size: 1rem;
 }
@@ -98,7 +111,7 @@ h1 {
 .hero-actions {
   margin-top: 1.4rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.8rem;
   flex-wrap: wrap;
@@ -234,6 +247,16 @@ footer {
   .topbar {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    order: -1;
+    width: 120px;
+    margin-bottom: 2px;
   }
 
   .metrics {
