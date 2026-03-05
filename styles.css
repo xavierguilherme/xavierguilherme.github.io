@@ -230,6 +230,40 @@ h2 {
   font-size: 0.88rem;
 }
 
+.certifications-grid {
+  margin-top: 11px;
+  display: grid;
+  gap: 9px;
+}
+
+.cert-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.cert-card h3 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.cert-meta {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 0.65rem;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.34rem 0.72rem;
+  color: var(--text);
+  font-size: 0.84rem;
+}
+
 footer {
   margin-top: 12px;
   text-align: center;
