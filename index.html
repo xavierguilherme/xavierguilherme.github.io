@@ -8,303 +8,201 @@
       name="description"
       content="Staff Data Engineer with 5+ years building cloud data platforms across fintech, gaming, and real estate with Snowflake, Airflow, dbt, and Python."
     />
+    <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="page">
-      <header class="topbar">
-        <a class="brand" href="#top">Guilherme Xavier</a>
-        <nav aria-label="Main navigation">
-          <a href="#experience">Experience</a>
-          <a href="#products">Founder</a>
-          <a href="#stack">Stack</a>
-          <a href="#credentials">Credentials</a>
-        </nav>
-      </header>
+    <canvas id="network" aria-hidden="true"></canvas>
 
-      <main id="top">
-        <section class="hero">
+    <div class="screen">
+      <aside class="me">
+        <img class="portrait" src="./me.png" alt="Guilherme Xavier" width="76" height="76" />
+        <p class="role">Staff Data Engineer, based in Brazil</p>
+        <h1>Guilherme Xavier</h1>
+        <p class="pitch">
+          I build cloud data platforms that move fast and cost less, and complete
+          products that run from data pipeline to interface.
+        </p>
+
+        <dl class="numbers">
           <div>
-            <p class="location">Staff Data Engineer · Brazil</p>
-            <h1>Turning complex data systems into measurable business outcomes.</h1>
-            <p class="headline">
-              I have 5+ years of experience building cloud data platforms across fintech,
-              gaming, and real estate. I specialize in Snowflake, Airflow, dbt, and Python
-              across GCP, AWS, and Azure—with a track record of automating revenue-critical
-              workflows and cutting compute costs at scale.
+            <dt>3M+</dt>
+            <dd>events a day</dd>
+          </div>
+          <div>
+            <dt>7h to 30min</dt>
+            <dd>daily job runtime</dd>
+          </div>
+          <div>
+            <dt>60%</dt>
+            <dd>less dbt compute</dd>
+          </div>
+        </dl>
+
+        <div class="contact">
+          <a class="btn btn-primary" href="mailto:contact@guilhermexavier.dev">Email me</a>
+          <a class="btn" href="./Guilherme_Xavier_Staff_Data_Engineer_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          <a class="icon" href="https://github.com/xavierguilherme" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.21.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.15-1.11-1.46-1.11-1.46-.9-.61.07-.6.07-.6 1 .07 1.52 1 1.52 1 .88 1.5 2.31 1.07 2.87.82.09-.65.35-1.07.63-1.32-2.22-.25-4.56-1.1-4.56-4.93 0-1.09.39-1.99 1.03-2.69-.1-.26-.45-1.29.1-2.68 0 0 .84-.27 2.75 1.02A9.65 9.65 0 0 1 12 6.8a9.7 9.7 0 0 1 2.5.34c1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.43.1 2.68.64.7 1.03 1.6 1.03 2.7 0 3.83-2.34 4.68-4.57 4.92.36.31.68.91.68 1.84v2.73c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
+            </svg>
+          </a>
+          <a class="icon" href="https://www.linkedin.com/in/guilherme-xavier/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12zM5.62 9.75h2.63v8.63H5.62V9.75zm4.13 0h2.52v1.18h.04c.35-.66 1.22-1.36 2.5-1.36 2.67 0 3.16 1.76 3.16 4.04v4.77h-2.63v-4.23c0-1.01-.02-2.31-1.41-2.31-1.41 0-1.62 1.1-1.62 2.24v4.3H9.75V9.75z" />
+            </svg>
+          </a>
+          <a class="icon" href="https://x.com/guilhermexdev" target="_blank" rel="noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.53 3h3.02l-6.6 7.54L21.75 21h-6.09l-4.77-6.23L5.44 21H2.42l7.06-8.07L2.25 3h6.24l4.31 5.7L17.53 3zm-1.06 16.2h1.67L7.6 4.72H5.81l10.66 14.48z" />
+            </svg>
+          </a>
+        </div>
+      </aside>
+
+      <section class="deck">
+        <div class="tabs" role="tablist" aria-label="Sections">
+          <button role="tab" id="tab-work" aria-controls="panel-work" aria-selected="true" data-scene="work">Work</button>
+          <button role="tab" id="tab-founder" aria-controls="panel-founder" aria-selected="false" tabindex="-1" data-scene="founder">Founder</button>
+          <button role="tab" id="tab-stack" aria-controls="panel-stack" aria-selected="false" tabindex="-1" data-scene="stack">Stack</button>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-work" aria-labelledby="tab-work">
+          <ol class="jobs">
+            <li tabindex="0">
+              <div class="job-head">
+                <h2>Riot Games</h2>
+                <p class="when">2026 to now</p>
+              </div>
+              <p class="role-line">Staff Data Engineer, contractor</p>
+              <div class="more">
+                <ul>
+                  <li>Delivered an end-to-end console partner funnel on Airflow, dbt, and Databricks, from wishlist through gameplay.</li>
+                  <li>Cut the main daily job from 7 hours to 30 minutes with the dbt Fusion engine and incremental models.</li>
+                  <li>Reduced dbt compute costs by 60% by redesigning materialization strategies across the project.</li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0">
+              <div class="job-head">
+                <h2>Mission Lane</h2>
+                <p class="when">2024 to now</p>
+              </div>
+              <p class="role-line">Senior Data Engineer, contractor</p>
+              <div class="more">
+                <ul>
+                  <li>Automated onboarding for 15+ settlement partners into workflows supporting $700K+ in monthly revenue.</li>
+                  <li>Delivered five collections and recoveries projects that removed 80+ hours of manual work per week.</li>
+                  <li>Migrated Dataproc jobs to Airflow and dbt, cutting compute costs by 15% and improving query performance by 65%.</li>
+                  <li>Reduced a Snowflake-to-Pub/Sub export from 30 minutes to 40 seconds across 30+ pipelines.</li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0">
+              <div class="job-head">
+                <h2>Cherre</h2>
+                <p class="when">2025</p>
+              </div>
+              <p class="role-line">Senior Data Engineer, fixed-term contract</p>
+              <div class="more">
+                <ul>
+                  <li>Delivered 30+ production pipelines with Python, dbt, Airflow, Snowflake, and BigQuery for real estate data.</li>
+                  <li>Reduced Snowflake costs by 20% and improved Kubernetes reliability and resource efficiency.</li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0">
+              <div class="job-head">
+                <h2>Nelogica</h2>
+                <p class="when">2022 to 2024</p>
+              </div>
+              <p class="role-line">Data Engineer</p>
+              <div class="more">
+                <ul>
+                  <li>Built an in-house communications orchestrator handling 70K+ daily messages and cutting third-party costs by 65%.</li>
+                  <li>Scaled real-time ingestion to 3M+ daily events at 30-second latency and built 100+ Airflow pipelines.</li>
+                  <li>Architected the company’s first data lake and managed a 5 TB OpenSearch cluster.</li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0">
+              <div class="job-head">
+                <h2>MG Info</h2>
+                <p class="when">2021 to 2022</p>
+              </div>
+              <p class="role-line">Data Engineer</p>
+              <div class="more">
+                <ul>
+                  <li>Led the migration of 50 on-premises sources and 10 TB of data to Azure.</li>
+                  <li>Built 20 pipelines with Azure Data Factory, Synapse, and Databricks.</li>
+                  <li>Introduced Delta Lake and improved query performance by 40%.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="panel" role="tabpanel" id="panel-founder" aria-labelledby="tab-founder" hidden>
+          <div class="vg">
+            <img src="./assets/vectorgrid-lockup.svg" alt="VectorGrid" class="vg-logo" />
+            <p>
+              Co-founder since 2026. I work across product, engineering, data,
+              infrastructure, and go-to-market.
             </p>
-            <div class="hero-actions">
-              <a class="primary" href="mailto:contact@guilhermexavier.dev">Start a Conversation</a>
-              <a
-                class="secondary"
-                href="./Guilherme_Xavier_Staff_Data_Engineer_Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                >View Resume</a
-              >
-              <div id="contact" class="socials">
-                <a href="https://github.com/xavierguilherme" target="_blank" rel="noreferrer" aria-label="GitHub">
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path
-                      d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.21.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.46-1.15-1.11-1.46-1.11-1.46-.9-.61.07-.6.07-.6 1 .07 1.52 1 1.52 1 .88 1.5 2.31 1.07 2.87.82.09-.65.35-1.07.63-1.32-2.22-.25-4.56-1.1-4.56-4.93 0-1.09.39-1.99 1.03-2.69-.1-.26-.45-1.29.1-2.68 0 0 .84-.27 2.75 1.02A9.65 9.65 0 0 1 12 6.8a9.7 9.7 0 0 1 2.5.34c1.9-1.3 2.74-1.02 2.74-1.02.55 1.4.2 2.43.1 2.68.64.7 1.03 1.6 1.03 2.7 0 3.83-2.34 4.68-4.57 4.92.36.31.68.91.68 1.84v2.73c0 .27.18.58.69.48A10 10 0 0 0 12 2z"
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/guilherme-xavier/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path
-                      d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12 1.56 1.56 0 0 1 0 3.12zM5.62 9.75h2.63v8.63H5.62V9.75zm4.13 0h2.52v1.18h.04c.35-.66 1.22-1.36 2.5-1.36 2.67 0 3.16 1.76 3.16 4.04v4.77h-2.63v-4.23c0-1.01-.02-2.31-1.41-2.31-1.41 0-1.62 1.1-1.62 2.24v4.3H9.75V9.75z"
-                    />
-                  </svg>
-                </a>
-                <a href="mailto:contact@guilhermexavier.dev" aria-label="Email">
-                  <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                    <path
-                      d="M4 6h16a2 2 0 0 1 2 2v.35l-10 5.71L2 8.35V8a2 2 0 0 1 2-2zm18 4.65V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-5.35l9.5 5.43a1 1 0 0 0 1 0L22 10.65z"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
+            <a class="btn" href="https://vectorgrid.com.br/en" target="_blank" rel="noreferrer">Visit VectorGrid</a>
           </div>
-          <img class="hero-photo" src="./me.png" alt="Portrait of Guilherme Xavier" />
-        </section>
-
-        <section class="metrics" aria-label="Career highlights">
-          <article>
-            <p class="metric-value">93%</p>
-            <p class="metric-label">Daily Job Runtime Reduction</p>
-          </article>
-          <article>
-            <p class="metric-value">60%</p>
-            <p class="metric-label">dbt Compute Cost Reduction</p>
-          </article>
-          <article>
-            <p class="metric-value">80+</p>
-            <p class="metric-label">Manual Hours Removed Weekly</p>
-          </article>
-          <article>
-            <p class="metric-value">3M+</p>
-            <p class="metric-label">Events Processed Daily</p>
-          </article>
-        </section>
-
-        <section id="experience" class="section">
-          <p class="section-label">Career</p>
-          <h2>Selected Experience</h2>
-          <div class="experience-list">
-            <article>
-              <div class="entry-heading">
-                <div>
-                  <h3>Riot Games</h3>
-                  <p class="role">Staff Data Engineer · Contractor</p>
-                </div>
-                <p class="date">Jun 2026 – Present</p>
-              </div>
-              <ul>
-                <li>Delivered an end-to-end console partner funnel on Airflow, dbt, and Databricks, from wishlist through gameplay.</li>
-                <li>Cut the main daily job from 7 hours to 30 minutes with the dbt Fusion engine and incremental models.</li>
-                <li>Reduced dbt compute costs by 60% by redesigning materialization strategies across the project.</li>
-              </ul>
-            </article>
-            <article>
-              <div class="entry-heading">
-                <div>
-                  <h3>Mission Lane</h3>
-                  <p class="role">Senior Data Engineer · Contractor</p>
-                </div>
-                <p class="date">Apr 2024 – Present</p>
-              </div>
-              <ul>
-                <li>Automated onboarding for 15+ settlement partners into workflows supporting $700K+ in monthly revenue.</li>
-                <li>Delivered five collections and recoveries projects that removed 80+ hours of manual work per week.</li>
-                <li>Migrated Dataproc jobs to Airflow and dbt, cutting compute costs by 15% and improving query performance by 65%.</li>
-                <li>Reduced a Snowflake-to-Pub/Sub export from 30 minutes to 40 seconds across 30+ pipelines.</li>
-              </ul>
-            </article>
-            <article>
-              <div class="entry-heading">
-                <div>
-                  <h3>Cherre</h3>
-                  <p class="role">Senior Data Engineer · Fixed-term contract</p>
-                </div>
-                <p class="date">Jun 2025 – Dec 2025</p>
-              </div>
-              <ul>
-                <li>Delivered 30+ production pipelines with Python, dbt, Airflow, Snowflake, and BigQuery for real estate data.</li>
-                <li>Reduced Snowflake costs by 20% and improved Kubernetes reliability and resource efficiency.</li>
-              </ul>
-            </article>
-            <article>
-              <div class="entry-heading">
-                <div>
-                  <h3>Nelogica</h3>
-                  <p class="role">Data Engineer</p>
-                </div>
-                <p class="date">Jan 2022 – Apr 2024</p>
-              </div>
-              <ul>
-                <li>Built an in-house communications orchestrator handling 70K+ daily messages and cutting third-party costs by 65%.</li>
-                <li>Scaled real-time ingestion to 3M+ daily events at 30-second latency and built 100+ Airflow pipelines.</li>
-                <li>Architected the company’s first data lake and managed a 5 TB OpenSearch cluster.</li>
-              </ul>
-            </article>
-            <article>
-              <div class="entry-heading">
-                <div>
-                  <h3>MG Info</h3>
-                  <p class="role">Data Engineer</p>
-                </div>
-                <p class="date">Jun 2021 – Jan 2022</p>
-              </div>
-              <ul>
-                <li>Led the migration of 50 on-premises sources and 10 TB of data to Azure.</li>
-                <li>Built 20 pipelines with Azure Data Factory, Synapse, and Databricks.</li>
-                <li>Introduced Delta Lake and improved query performance by 40%.</li>
-              </ul>
-            </article>
+          <div class="products">
+            <a class="product" href="https://soli.vectorgrid.com.br/en/" target="_blank" rel="noreferrer">
+              <img src="./assets/soli-logo.svg" alt="Soli" class="product-logo product-logo-soli" />
+              <p>Territorial intelligence for Brazil’s rural land market, across 8M+ mapped properties.</p>
+            </a>
+            <a class="product" href="https://vitrinicreative.com" target="_blank" rel="noreferrer">
+              <img src="./assets/vitrini-lockup.svg" alt="Vitrini" class="product-logo product-logo-vitrini" />
+              <p>AI-powered creatives that stay on brand, across every social and ad format.</p>
+            </a>
           </div>
-        </section>
+        </div>
 
-        <section id="products" class="section">
-          <p class="section-label">Founder Experience</p>
-          <div class="founder-heading">
+        <div class="panel" role="tabpanel" id="panel-stack" aria-labelledby="tab-stack" hidden>
+          <dl class="kit">
             <div>
-              <h2>VectorGrid</h2>
-              <p class="founder-role">Co-Founder</p>
+              <dt>Languages</dt>
+              <dd>Python, SQL, TypeScript, Java, Rust, FastAPI, Nuxt.js, MCP</dd>
             </div>
-            <p class="founder-date">Apr 2026 – Present</p>
-          </div>
-          <p class="founder-summary">
-            I work across product, engineering, data, infrastructure, and go-to-market—from
-            identifying problems worth solving and shaping product direction to designing
-            architecture, building full-stack applications, deploying production
-            infrastructure, and iterating with users.
-          </p>
-          <a
-            class="company-link"
-            href="https://vectorgrid.com.br/en"
-            target="_blank"
-            rel="noreferrer"
-            >Visit vectorgrid.com.br ↗</a
-          >
-          <h3 class="products-title">Products I Build and Operate</h3>
-          <div class="products-grid">
-            <article class="product-card">
-              <div class="product-heading">
-                <h3>Soli</h3>
-                <a href="https://soli.vectorgrid.com.br/en/" target="_blank" rel="noreferrer">Visit product ↗</a>
-              </div>
-              <p>
-                A territorial-intelligence platform for Brazil’s rural land market,
-                combining environmental, land-registry, logistics, and market data across
-                8M+ mapped properties.
-              </p>
-              <p class="product-stack">PostGIS · Vector tiles · Remote sensing</p>
-            </article>
-            <article class="product-card">
-              <div class="product-heading">
-                <h3>Vitrini</h3>
-                <a href="https://vitrinicreative.com" target="_blank" rel="noreferrer">Visit product ↗</a>
-              </div>
-              <p>
-                An AI-powered creative platform that produces brand-consistent social and
-                ad assets across formats from a one-time brand setup.
-              </p>
-              <p class="product-stack">Nuxt.js · FastAPI · PostgreSQL · MCP</p>
-            </article>
-          </div>
-          <p class="founder-note">
-            Built both products end to end and operate their production infrastructure on
-            Hetzner Cloud with Docker, Caddy, and automated GitHub Actions deployments.
-          </p>
-        </section>
-
-        <section id="stack" class="section">
-          <p class="section-label">Toolkit</p>
-          <h2>Technical Stack</h2>
-          <div class="stack-groups">
-            <article>
-              <h3>Languages &amp; Backend</h3>
-              <ul class="stack">
-                <li>Python</li><li>SQL</li><li>TypeScript</li><li>Java</li><li>Rust</li><li>FastAPI</li><li>REST APIs</li><li>OAuth 2.0/OIDC</li><li>MCP</li><li>Nuxt.js</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Data Engineering &amp; Processing</h3>
-              <ul class="stack">
-                <li>Spark</li><li>Databricks</li><li>Airflow</li><li>dbt</li><li>Kafka</li><li>Delta Lake</li><li>Iceberg</li><li>DuckDB</li><li>Polars</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Platforms &amp; Databases</h3>
-              <ul class="stack">
-                <li>Snowflake</li><li>BigQuery</li><li>ClickHouse</li><li>PostgreSQL</li><li>MySQL</li><li>Redis</li><li>DynamoDB</li><li>OpenSearch</li>
-              </ul>
-            </article>
-            <article>
-              <h3>Cloud, Infrastructure &amp; Delivery</h3>
-              <ul class="stack">
-                <li>GCP</li><li>AWS</li><li>Azure</li><li>Hetzner Cloud</li><li>Linux</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>Caddy</li><li>GitHub Actions</li><li>GitLab CI</li><li>Azure Pipelines</li><li>Grafana</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section id="credentials" class="section">
-          <p class="section-label">Background</p>
-          <h2>Education &amp; Certifications</h2>
-          <div class="certifications-grid">
-            <article class="cert-card education-card">
-              <h3>BSc, Computer Engineering</h3>
-              <p class="cert-meta">Federal University of Pelotas · 2022</p>
-            </article>
-            <article class="cert-card">
-              <h3>SnowPro Core Certification</h3>
-              <p class="cert-meta">Snowflake · Issued Apr 2025 · Expires Apr 2027</p>
-              <a
-                class="cert-link"
-                href="https://achieve.snowflake.com/ea3946ec-8b46-4289-922d-83a6d368699e#acc.ClmDRcfS"
-                target="_blank"
-                rel="noreferrer"
-                >Show credential</a
-              >
-            </article>
-            <article class="cert-card">
-              <h3>AWS Certified Data Engineer – Associate</h3>
-              <p class="cert-meta">Amazon Web Services · DEA-C01 · Issued May 2024 · Expires May 2027</p>
-              <a
-                class="cert-link"
-                href="https://www.credly.com/badges/bee26656-6c4a-42aa-ae64-ad5a879bf420"
-                target="_blank"
-                rel="noreferrer"
-                >Show credential</a
-              >
-            </article>
-            <article class="cert-card">
-              <h3>Palantir Foundry Aware</h3>
-              <p class="cert-meta">Palantir Technologies</p>
-            </article>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <p><span id="year"></span> · Guilherme Xavier · contact@guilhermexavier.dev</p>
-      </footer>
+            <div>
+              <dt>Data</dt>
+              <dd>Airflow, dbt, Spark, Databricks, Kafka, Delta Lake, Iceberg, DuckDB, Polars</dd>
+            </div>
+            <div>
+              <dt>Platforms</dt>
+              <dd>Snowflake, BigQuery, ClickHouse, PostgreSQL, Redis, DynamoDB, OpenSearch</dd>
+            </div>
+            <div>
+              <dt>Cloud</dt>
+              <dd>GCP, AWS, Azure, Hetzner, Kubernetes, Docker, Terraform, GitHub Actions, Grafana</dd>
+            </div>
+            <div>
+              <dt>Credentials</dt>
+              <dd>
+                BSc Computer Engineering, UFPel.
+                <a class="text-link" href="https://achieve.snowflake.com/ea3946ec-8b46-4289-922d-83a6d368699e#acc.ClmDRcfS" target="_blank" rel="noreferrer">SnowPro Core</a>,
+                <a class="text-link" href="https://www.credly.com/badges/bee26656-6c4a-42aa-ae64-ad5a879bf420" target="_blank" rel="noreferrer">AWS Data Engineer</a>,
+                Palantir Foundry Aware.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
     </div>
+
+    <script src="./network.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
